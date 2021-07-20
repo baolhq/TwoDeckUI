@@ -1,0 +1,81 @@
+﻿<Window x:Class="TwoDeckUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwoDeckUI"
+        mc:Ignorable="d"
+        Title="Two Decks" Height="600" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="DECK 1"
+               FontSize="18"
+               HorizontalAlignment="Center"
+               Margin="0, 20, 0, 0"
+               VerticalAlignment="Top"/>
+
+
+        <ListBox Margin="30, 60, 30, 20"
+                 x:Name="leftDeck"
+                 FontSize="14"
+                 MouseDoubleClick="leftDeck_MouseDoubleClick"/>
+
+        <Label Content="DECK 2"
+               FontSize="18"
+               HorizontalAlignment="Center"
+               Margin="0, 20, 0, 0"
+               VerticalAlignment="Top"
+               Grid.Column="1"/>
+
+        <ListBox Margin="30, 60, 30, 20"
+                 Grid.Column="1"
+                 x:Name="rightDeck"
+                 FontSize="14"
+                 MouseDoubleClick="rightDeck_MouseDoubleClick"/>
+
+        <Button Content="SHUFFLE"
+                Width="100"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1"
+                x:Name="shuffleBtn"
+                Click="shuffleBtn_Click"/>
+
+        <Button Content="CLEAR"
+                Width="100"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="1"
+                x:Name="clearBtn" Click="clearBtn_Click"/>
+
+        <Button Content="RESET"
+                Width="100"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="2"
+                x:Name="resetBtn" Click="resetBtn_Click"/>
+
+        <Button Content="SORT"
+                Width="100"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="2"
+                Grid.Column="1"
+                x:Name="sortBtn" Click="sortBtn_Click"/>
+
+    </Grid>
+</Window>
